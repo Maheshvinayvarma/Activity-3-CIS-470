@@ -82,10 +82,10 @@ describe("classifyTriangle: Required input conditions -  See readme for more det
         expect(result).toEqual("Not a Triangle");
     });
 
-    // Test case 10: Not a Triangle with sides of length 1, 1, and 1
+    // Test case 10: Equilateral Triangle with sides of length 1, 1, and 1
     it('should classify "Not a Triangle" with sides of length 1, 1, and 1', () => {
         const result = classifyTriangle(1, 1, 1);
-        expect(result).toEqual("Not a Triangle");
+        expect(result).toEqual("Equilateral");
     });
 
     // Test case 11: Equilateral triangle with sides of length 100
@@ -130,21 +130,21 @@ describe("classifyTriangle: Required input conditions -  See readme for more det
         expect(result).toEqual("Scalene");
     });
 
-    // Test case 18: Not a Triangle with sides of length 1, 2, and 300
+    // Test case 18: Will throw an error with sides of length 1, 2, and 300
     it('should classify "Not a Triangle" with sides of length 1, 2, and 300', () => {
         const result = classifyTriangle(1, 2, 300);
-        expect(result).toEqual("Not a Triangle");
+        expect(result).toEqual("Error: Input conditions C1, C2, or C3 failed.");
     });
 
-    // Test case 19: Not a Triangle with sides of length 3, 400, and 5
+    // Test case 19: Will throw an error with sides of length 3, 400, and 5
     it('should classify "Not a Triangle" with sides of length 3, 400, and 5', () => {
         const result = classifyTriangle(3, 400, 5);
-        expect(result).toEqual("Not a Triangle");
+        expect(result).toEqual("Error: Input conditions C1, C2, or C3 failed.");
     });
 
-    // Test case 20: Not a Triangle with sides of length 500, 6, and 7
+    // Test case 20: Will throw an error with sides of length 500, 6, and 7
     it('should classify "Not a Triangle" with sides of length 500, 6, and 7', () => {
         const result = classifyTriangle(500, 6, 7);
-        expect(result).toEqual("Not a Triangle");
+        expect(result).toEqual("Error: Input conditions C1, C2, or C3 failed.");
     });
 });
